@@ -16,3 +16,20 @@ ${HOME}/.config/starship.toml
 
 ![Git and Text Rendering](static/images/dotfiles.png)<br>
 <sub>*Fig. 2: Git and Text Rendering*</sub>
+
+## Custom Coding Profile
+```
+cd dotfiles
+
+# Make sure that a local folder where you keep your apps is added to the .bashrc PATH variable. For e.g.
+export PATH="$PATH:$HOME/.local/bin
+
+# Create executable
+chmod +x kitty_coding.sh
+
+# Create a symbolic link to the script
+ln -sf ${HOME}/dotfiles/kitty_coding.sh ${HOME}/.local/bin/kcode
+
+# Launch the custom kitty profile for a desired directory
+kcode some_dir
+```
